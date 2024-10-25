@@ -110,20 +110,18 @@ public class Propietario extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        String cedula = Cedula.getText();  // Obtén el nombre del campo de texto
-        String resultado = ConsultarMulta.buscarMultaPorNombre(cedula);  // Consulta las multas
+        String cedula = Cedula.getText();  
+        String resultado = ConsultarMulta.buscarMultaPorNombre(cedula);  
         JOptionPane.showMessageDialog(this, resultado);
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        String cedula = Cedula.getText();  // Campo de texto para el nombre del propietario
+        String cedula = Cedula.getText();  
 
-        // Nombre del archivo PDF que corresponde a este propietario
         String nombreArchivo = "factura_" + cedula + ".pdf";
 
-        // Llama al método para abrir el archivo PDF
         AbrirPDF.abrirFactura(nombreArchivo);
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -140,7 +138,6 @@ public class Propietario extends javax.swing.JFrame {
         // TODO add your handling code here:
         String documento = Cedula.getText();
 
-        // Validar que el documento no esté vacío
         if (documento.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Por favor, ingresa un documento válido.");
             return;

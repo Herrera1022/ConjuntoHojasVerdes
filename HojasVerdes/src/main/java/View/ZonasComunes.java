@@ -182,10 +182,8 @@ public class ZonasComunes extends javax.swing.JFrame {
         try (Scanner scanner = new Scanner(new File("turnos_guardados.txt"))) {
             while (scanner.hasNextLine()) {
                 String[] datos = scanner.nextLine().split(",");
-                modeloTabla.addRow(datos); // cargar los datos en la tabla
             }
         } catch (FileNotFoundException e) {
-            // Si no existe el archivo, cargar los datos iniciales
             cargarDatosIniciales();
         }
     }
@@ -196,28 +194,22 @@ public class ZonasComunes extends javax.swing.JFrame {
         int filaSeleccionada = tablaZonas.getSelectedRow();
         int columnaSeleccionada = tablaZonas.getSelectedColumn();
 
-        // Verificar que se haya seleccionado una celda
         if (filaSeleccionada == -1 || columnaSeleccionada == -1) {
             JOptionPane.showMessageDialog(this, "Por favor, selecciona un horario y una zona para asignar el turno.");
             return;
         }
 
-        // Verificar que no se seleccione la columna de horarios (columna 0)
         if (columnaSeleccionada == 0) {
             JOptionPane.showMessageDialog(this, "No puedes asignar un turno en la columna de horarios.");
             return;
         }
 
-        // Obtener el estado actual de la celda seleccionada
         String estadoActual = (String) tablaZonas.getValueAt(filaSeleccionada, columnaSeleccionada);
 
-        // Verificar si el turno está disponible
         if ("Disponible".equals(estadoActual)) {
-            // Asignar el turno (cambiar a "Ocupado")
             tablaZonas.setValueAt("Ocupado por " + documentoUsuario, filaSeleccionada, columnaSeleccionada);
             JOptionPane.showMessageDialog(this, "Turno asignado con éxito.");
         } else {
-            // Mostrar mensaje si ya está ocupado
             JOptionPane.showMessageDialog(this, "Este turno ya está ocupado.");
         }
     }//GEN-LAST:event_asignarTurnoActionPerformed
