@@ -6,5 +6,13 @@
     "multa": "250000",
     "descripción": "No asistió a la reunión de propietarios",
     "cedula": "1022143677"
+  },
+  {
+    "nombre": "Jbalvin",
+    "tipoDocumento": "pasaporte",
+    "propiedad": "1290",
+    "multa": "23000",
+    "descripción": "paquete olvidado",
+    "cedula": "1022143688"
   }
 ]

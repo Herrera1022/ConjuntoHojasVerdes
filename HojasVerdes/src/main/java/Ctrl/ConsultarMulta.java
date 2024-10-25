@@ -22,20 +22,15 @@ public class ConsultarMulta {
     public static String buscarMultaPorNombre(String cedula) {
 
         try {
-            // Lee el archivo JSON
             FileReader reader = new FileReader("propietarios.json");
 
-            // Define el tipo de la lista de personas
             Type personaListType = new TypeToken<ArrayList<Persona>>() {
             }.getType();
 
-            // Convierte el JSON a una lista de objetos Persona
             List<Persona> personas = new Gson().fromJson(reader, personaListType);
 
-            // Busca la multa por nombre
             for (Persona persona : personas) {
                 if (persona.getCedula().equalsIgnoreCase(cedula)) {
-                    // Retorna la multa y la descripción
                     return "Multa: " + persona.getMulta() + ", Descripción: " + persona.getDescripción();
                 }
             }

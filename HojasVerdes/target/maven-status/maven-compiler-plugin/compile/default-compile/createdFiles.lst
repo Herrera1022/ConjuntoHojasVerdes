@@ -4,6 +4,7 @@ View\EmpleadoFactura$1.class
 View\EmpleadoMulta.class
 Ctrl\ConsultarMulta.class
 View\Ingresar$3.class
+View\Administrador.class
 Ctrl\ManejoJson.class
 View\ZonasComunes$3.class
 Ctrl\ManejoJson$1.class
@@ -11,6 +12,8 @@ Ctrl\HojasVerdes.class
 View\Propietario$1.class
 Ctrl\AbrirPDF.class
 Ctrl\FacturaPDF.class
+View\Administrador$1.class
+View\Información$3.class
 View\Propietario.class
 View\Empleado$3.class
 View\Ingresar$1.class
@@ -22,7 +25,10 @@ Model\Persona.class
 View\EmpleadoMulta$1.class
 View\Propietario$2.class
 View\Empleado$1.class
+View\Información$1.class
+View\Información.class
 Ctrl\ConsultarMulta$1.class
+View\Administrador$2.class
 View\EmpleadoMulta$3.class
 View\Ingresar$2.class
 Ctrl\ManejoJson$2.class
@@ -34,3 +40,4 @@ View\Propietario$4.class
 View\ZonasComunes$1.class
 View\Inicio.class
 View\Empleado$2.class
+View\Información$2.class

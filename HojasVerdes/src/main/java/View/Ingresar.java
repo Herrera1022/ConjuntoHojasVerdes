@@ -143,6 +143,13 @@ public class Ingresar extends javax.swing.JFrame {
             empleado.setLocationRelativeTo(null);
             dispose();
         }
+        if (contrasena.equals("456")) {
+            Administrador admin = new Administrador();
+            admin.setVisible(true);
+            admin.pack();
+            admin.setLocationRelativeTo(null);
+            dispose();
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

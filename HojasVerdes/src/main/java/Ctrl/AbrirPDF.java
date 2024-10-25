@@ -16,7 +16,7 @@ public class AbrirPDF {
             if (archivo.exists()) {
                 if (Desktop.isDesktopSupported()) {
                     Desktop desktop = Desktop.getDesktop();
-                    desktop.open(archivo);  // Abre el PDF en la aplicación predeterminada del sistema
+                    desktop.open(archivo);  
                 } else {
                     System.out.println("El entorno gráfico no es compatible.");
                 }
